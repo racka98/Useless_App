@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Useless App</string>
+    <string name="useless_machine_instructions">Verify you are not a robot by tapping the switches</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="finish_text">Don\'t celebrate. It was just luck. Here, have a cookie!</string>
+    <string name="cookie_text">Cookie Image</string>
+    <string name="prompt_email">Enter email</string>
+    <string name="prompt_password">Enter Password</string>
+    <string name="action_login">LOGIN</string>
+    <string name="welcome_message">Give us your data now! 🙁🔫</string>
+    <string name="verify_text">VERIFY</string>
+</resources>

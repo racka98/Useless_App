@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".uselessscreen.UselessScreen">
+
+    <data>
+        <variable
+            name="uselessScreenViewModel"
+            type="com.rackaapps.uselessapp.uselessscreen.UselessScreenViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/useless_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/useless_machine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:text="@string/useless_machine_instructions"
+            android:textAlignment="center"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/switch1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(0)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch2"
+            app:layout_constraintEnd_toStartOf="@+id/switch2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(1)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/switch3"
+            app:layout_constraintStart_toEndOf="@+id/switch1"
+            app:layout_constraintTop_toBottomOf="@+id/useless_machine_text" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(2)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch2" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(3)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch5"
+            app:layout_constraintEnd_toStartOf="@+id/switch5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(4)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/switch6"
+            app:layout_constraintStart_toEndOf="@+id/switch4"
+            app:layout_constraintTop_toBottomOf="@+id/switch2" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(5)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch5" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(6)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch8"
+            app:layout_constraintEnd_toStartOf="@+id/switch8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(7)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintEnd_toStartOf="@+id/switch9"
+            app:layout_constraintStart_toEndOf="@+id/switch7"
+            app:layout_constraintTop_toBottomOf="@+id/switch5" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:checked="@{uselessScreenViewModel.switchState.get(8)}"
+            android:onClick="@{() -> uselessScreenViewModel.randomizeSwitches()}"
+            android:textSize="@dimen/title_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/switch8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch8" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:paddingTop="@dimen/large_margin"
+            android:paddingBottom="@dimen/large_margin"
+            android:text="@string/verify_text"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch8"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

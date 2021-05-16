@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginScreen">
+
+    <fragment
+        android:id="@+id/uselessScreen"
+        android:name="com.rackaapps.uselessapp.uselessscreen.UselessScreen"
+        android:label="Useless Screen"
+        tools:layout="@layout/useless_screen_fragment">
+        <action
+            android:id="@+id/action_uselessScreen_to_finishScreen"
+            app:destination="@id/finishScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishScreen"
+        android:name="com.rackaapps.uselessapp.finishscreen.FinishScreen"
+        android:label="Finish Screen"
+        tools:layout="@layout/fragment_finish_screen" />
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.rackaapps.uselessapp.loginscreen.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_uselessScreen"
+            app:destination="@id/uselessScreen"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/loginScreen" />
+    </fragment>
+</navigation>
